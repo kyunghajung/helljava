@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+import static main.java.controller.GetRedirect.doGetRedirect;
+
 /**
  * Created by junghk on 2016. 7. 27..
  */
@@ -18,31 +20,54 @@ public class BoardWriteController extends HttpServlet{
 
     private final BoardService boardService = new BoardService();
 
+    // read, write, update, delete
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-
         String seq = request.getParameter("seq");
-        RequestDispatcher view = request.getRequestDispatcher("/board/write.jsp");
+        String update = request.getParameter("update");
+        String id = (String) session.getAttribute("id");
+        String url ="/board/main";
 
-        if(seq != null && seq.length() != 0){
+       if(seq != null && seq.length() != 0){
             request.setAttribute("boads", boardService.findOne(seq));
+           url = "/board/read.jsp";
+
+           if(update!=null){
+               if(update.equals("Y")){
+                   url = "/board/update.jsp";
+               }else if(update.equals("D")){
+                   boardService.delete(seq);
+                   request.setAttribute("message", "삭제되었습니다.");
+                   request.setAttribute("redirectUrl", "/board/main");
+                   url="/logic/alert.jsp";
+               }
+           }
+
+        } else {
+            request.setAttribute("writer", id);
+            url = "/board/write.jsp";
         }
 
-        request.setAttribute("writer", session.getAttribute("id"));
-        view.forward(request, response);
+        if(id == null || id.length()==0){
+            request.setAttribute("message", "로그인 후 이용하실 수 있습니다.");
+            request.setAttribute("redirectUrl", "/login");
+            url="/logic/alert.jsp";
+        }
 
+        doGetRedirect(request, response, url);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        request.setCharacterEncoding("UTF-8");
         String title   = request.getParameter("title");    // 제목
         String content = request.getParameter("content");  // 내용
         String writer  = request.getParameter("writer");   // 이름
         String seq = request.getParameter("seq");
 
-        Board board = new Board(title, writer, content);
+        Board board = new Board(seq, title, writer, content);
 
         if(seq == null || seq.length() == 0){
             boardService.create(board);
@@ -54,4 +79,6 @@ public class BoardWriteController extends HttpServlet{
 
         response.sendRedirect("/board/main");
     }
+
+
 }

@@ -12,8 +12,14 @@
 </head>
 <body>
 <div class="container">
+
   <h2>웰컴투지옥자바</h2>
-  <button type="button" class="btn btn-default" onclick="window.location='/login';">로그인</button>
+  <div class="container">
+
+    <button type="button" class="btn btn-default" onclick="window.location='/join';">회원가입</button>
+    <button type="button" class="btn btn-default" onclick="window.location='/login';">로그인</button>
+
+  </div>
 </div>
 <!-- jQuery -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

@@ -16,8 +16,8 @@ public class Board {
 
     }
 
-    public Board(String title, String writer, String content) {
-
+    public Board(String seq, String title, String writer, String content) {
+        this.seq = seq;
         this.title = title;
         this.writer = writer;
         this.content = content;

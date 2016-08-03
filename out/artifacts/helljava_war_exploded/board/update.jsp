@@ -33,7 +33,7 @@
                 <tr>
                     <td>
                         <label for="content">내용</label>
-                        <textarea class="form-control" rows="5"  id="content" name="content" value="${boads.writer}"></textarea>
+                        <input type="text" class="form-control" rows="5"  id="content" name="content" value="${boads.content}"/>
                     </td>
                 </tr>
             </table>

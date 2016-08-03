@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+import static main.java.controller.GetRedirect.doGetRedirect;
+
 /**
  * Created by junghk on 2016. 7. 28..
  */
@@ -20,9 +22,9 @@ public class LoginController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        RequestDispatcher view = request.getRequestDispatcher("/login/login.jsp");
-        view.forward(request, response);
+        HttpSession session = request.getSession();
+        request.getSession().invalidate();
+        doGetRedirect(request, response, "/login/login.jsp");
 
     }
 
@@ -35,16 +37,26 @@ public class LoginController extends HttpServlet {
         String id  = request.getParameter("id");
         String pwd = request.getParameter("pwd");
 
+
+        System.out.println(id);
+        System.out.println(pwd);
+
         Member member = memberService.loginCheck(id, pwd);
 
         if(member != null){
             session.setAttribute("id", id);
             session.setAttribute("pwd", pwd);
-
             response.sendRedirect("/board/main");
         } else {
-
-            response.sendRedirect("/login");
+            request.setAttribute("message", "아이디, 비밀번호를 확인해주세요");
+            request.setAttribute("redirectUrl", "/login");
+            doGetRedirect(request, response,"/logic/alert.jsp");
         }
+
+
     }
+
+
+
+
 }

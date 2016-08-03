@@ -32,11 +32,12 @@
             <tr>
                 <td>
                     <label for="content">내용</label>
-                    <textarea class="form-control" rows="5"  id="content" name="content" value="${boads.content}" readonly></textarea>
+                    <input type="text" class="form-control" rows="5"  id="content" name="content" value="${boads.content}" readonly/>
                 </td>
             </tr>
         </table>
-        <button type="button" class="btn btn-default" >수정</button><!--onclick="window.location='/board/update';"-->
+        <button type="button" class="btn btn-default" onclick="window.location='/board/read?update=Y&seq=${boads.seq}';">수정</button>
+        <button type="button" class="btn btn-default" onclick="window.location='/board/read?update=D&seq=${boads.seq}';">삭제</button>
     </div>
 
 

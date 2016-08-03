@@ -31,7 +31,6 @@
                 </tr>
             </table>
             <button type="submit" class="btn btn-default">로그인</button>
-            <button type="button" class="btn btn-default" onclick="window.location='/join';">가입하기</button>
         </form>
     </div>
 

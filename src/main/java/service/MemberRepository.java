@@ -10,4 +10,6 @@ public interface MemberRepository {
     void join(Member member);
 
     Member loginCheck(String id, String pwd);
+
+    String idCheck(String id);
 }

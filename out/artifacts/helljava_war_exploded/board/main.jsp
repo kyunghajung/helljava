@@ -18,9 +18,16 @@
                 - <strike>리스트, 검색이 되어야, (제목, 내용, 작성자, all)</strike><br>
                 - <strike>상세페이지</strike><br>
                 - <strike>게시물 crud, 페이징은 필요없음</strike><br>
-                - 로그인을 해야 글을 쓸 수 있음<br>
-                - <strike>로그인페이지</strike> <br>
-                - 쿠키(아이디 유지)
+                - <strike>로그인을 해야 글을 쓸 수 있음</strike><br>
+                - <strike>로그아웃</strike> <br>
+                - <strike>로그인</strike> <br>
+                - 쿠키(아이디 유지)<br>
+                - <strike>각종 유효성체크</strike><br>
+                - 커맨트패턴<br>
+                - 서비스 단 추가<br>
+                - <strike>h2 디비붙이기 우선 리스트만 디비 붙여놓고 나머지 작업해야지</strike><br>
+                - <strike>기능부터 만들자. (로그인, 가입 등)</strike><br>
+                -
             </p>
             <table class="table table-bordered">
                 <colgroup>
@@ -36,16 +43,11 @@
                 <tbody>
                     <c:forEach var="boadsList" items="${boadsList}">
                         <tr>
-                            <td><a href="/board/main?seq=${boadsList.seq}">${boadsList.title}</a></td>
+                            <td><a href="/board/read?seq=${boadsList.seq}">${boadsList.title}</a></td>
                             <td>${boadsList.writer}</td>
                         </tr>
                     </c:forEach>
 
-                <!--
-                <tr>
-                    <td colspan="3">조회 가능한 데이터가 없습니다.</td>
-                </tr>
-                -->
                 </tbody>
 
             </table>
@@ -82,12 +84,13 @@
 
         <c:choose>
 
-            <c:when test="${memberYn eq 'Y'}">
+            <c:when test="${memberYn == 'Y'}">
                 <button type="button" class="btn btn-default" onclick="window.location='/board/write';">글쓰기</button>
                 <button type="button" class="btn btn-default" onclick="window.location='/logout';">로그아웃</button>
             </c:when>
 
-            <c:when test="${memberYn eq 'N'}">
+            <c:when test="${memberYn != 'Y'}">
+                <button type="button" class="btn btn-default" onclick="window.location='/join';">회원가입</button>
                 <button type="button" class="btn btn-default" onclick="window.location='/login';">로그인</button>
             </c:when>
 
