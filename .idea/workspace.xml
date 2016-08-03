@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d15d7468-6a1f-46ea-be69-0a816b25d296" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/lib/h2-1.3.176.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controller/DbConnection.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controller/GetRedirect.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/controller/LogoutController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/service/BoardRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/logic/alert.jsp" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/helljava/main/java/controller/BoardController.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/helljava/main/java/controller/BoardWriteController.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/helljava/main/java/controller/JoinController.class" afterPath="" />
@@ -25,27 +19,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/helljava/main/java/service/MemberRepository.class" afterPath="$PROJECT_DIR$/out/production/helljava/main/java/service/MemberRepository.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/helljava/main/java/service/MemberService.class" afterPath="$PROJECT_DIR$/out/production/helljava/main/java/service/MemberService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/helljava.iml" afterPath="$PROJECT_DIR$/helljava.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/board/main.jsp" afterPath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/board/main.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/board/read.jsp" afterPath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/board/read.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/board/update.jsp" afterPath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/board/update.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/login/login.jsp" afterPath="$PROJECT_DIR$/out/artifacts/helljava_war_exploded/login/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/BoardController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/BoardController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/BoardWriteController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/BoardWriteController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/JoinController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/JoinController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/model/Board.java" afterPath="$PROJECT_DIR$/src/main/java/model/Board.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/BoardService.java" afterPath="$PROJECT_DIR$/src/main/java/service/BoardService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/MemberRepository.java" afterPath="$PROJECT_DIR$/src/main/java/service/MemberRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/service/MemberService.java" afterPath="$PROJECT_DIR$/src/main/java/service/MemberService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/board/main.jsp" afterPath="$PROJECT_DIR$/web/board/main.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/board/read.jsp" afterPath="$PROJECT_DIR$/web/board/read.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/board/update.jsp" afterPath="$PROJECT_DIR$/web/board/update.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/login/login.jsp" afterPath="$PROJECT_DIR$/web/login/login.jsp" />
     </list>
     <ignored path="helljava.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1200,7 +1179,7 @@
       <workItem from="1469615185653" duration="25436000" />
       <workItem from="1470141986690" duration="7600000" />
       <workItem from="1470200060844" duration="3588000" />
-      <workItem from="1470224468430" duration="10034000" />
+      <workItem from="1470224468430" duration="10089000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1469640147292</created>
@@ -1209,11 +1188,18 @@
       <option name="project" value="LOCAL" />
       <updated>1469640147292</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test">
+      <created>1470235902611</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1470235902611</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46658000" />
+    <option name="totallyTimeSpent" value="46713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-257" width="1920" height="1057" extended-state="0" />

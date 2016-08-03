@@ -1,0 +1,10 @@
+.DS_Store
+
+# large files
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# IntelliJ
+.idea
